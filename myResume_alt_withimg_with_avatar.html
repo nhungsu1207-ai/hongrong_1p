@@ -9,7 +9,7 @@
     :root{
       --bg:#0f1724;
       --card:#0b1220;
-      --accent:#fe94e3; /* 橘紅 */
+      --accent:#fe94e3;
       --muted:#94a3b8;
       --glass: rgba(255,255,255,0.04);
       --radius:14px;
@@ -19,8 +19,6 @@
     body{margin:0;background:linear-gradient(180deg,var(--bg),#071025);color:#e6eef8}
     .wrap{max-width:980px;margin:36px auto;padding:20px}
     .card{display:flex;gap:24px;background:linear-gradient(180deg,var(--card),#071223);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-
-    /* 左側資訊欄 */
     .aside{width:300px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-right:1px solid rgba(255,255,255,0.03)}
     .avatar-circle{width:120px;height:120px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#ffb4a2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#061423;margin:0 auto}
     .name{margin-top:16px;text-align:center;font-size:20px;font-weight:800}
@@ -28,8 +26,6 @@
     .contact{margin-top:20px}
     .contact p{margin:8px 0;color:var(--muted);font-size:14px}
     .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:700;margin-top:12px}
-
-    /* 主內容 */
     .main{flex:1;padding:26px}
     .section{margin-bottom:18px}
     .section h3{margin:0 0 8px 0;color:var(--accent);font-size:13px}
@@ -37,17 +33,13 @@
     .role{font-size:16px;font-weight:700}
     .period{color:var(--muted);font-size:13px}
     .desc{margin-top:8px;color:#dfe9f8}
-
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .chip{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--muted);font-size:13px}
-
     .tools{display:flex;gap:10px;margin-top:10px}
     .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
     .btn-download{background:var(--accent);color:#061423}
     .btn-edit{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-
     footer{padding:14px;text-align:center;color:var(--muted);font-size:13px}
-
     @media (max-width:760px){
       .card{flex-direction:column}
       .aside{width:100%;display:flex;gap:16px;align-items:center;justify-content:space-between}
@@ -60,7 +52,7 @@
 <div class="card">
 <aside class="aside">
 <div>
-<div class="avatar-circle" id="avatar2"><img alt="Avatar" src="image/4fd62e65-f076-49c3-b153-8ac170dd4676.jpg" style="width:120px;height:120px;object-fit:cover;border-radius:50%;"/></div>
+<div class="avatar-circle" id="avatar2"><img alt="Avatar" src="image/4fd62e65-f076-49c3-b153-8ac170dd4676.jpg" style="width:120px;height:120px;object-fit:cover;"/></div>
 <div class="name" id="name2">王氏紅絨</div>
 <div class="id">學號 AU114011114</div>
 <div style="text-align:center"><span class="badge">求職：前端工程師 / UI 設計</span></div>
@@ -74,8 +66,12 @@
 <main class="main">
 <div class="section">
 <h3>個人簡介</h3>
-<div class="card-item">
-<p class="desc" id="summary">具備前端開發及視覺設計經驗，熟悉 HTML/CSS/JS，熱衷建立使用者友善的互動介面。喜歡以簡潔的方式解決複雜問題。</p>
+<div class="card-item" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+<img alt="Profile photo" src="image/yard2.jpg" style="width:120px;height:120px;border-radius:12px;object-fit:cover;flex-shrink:0;"/>
+<p class="desc" id="summary" style="flex:1">
+              具備前端開發及視覺設計經驗，熟悉 HTML/CSS/JS，熱衷建立使用者友善的互動介面。
+              喜歡以簡潔的方式解決複雜問題。
+            </p>
 </div>
 </div>
 <div class="section">
@@ -121,7 +117,6 @@
 </div>
 </div>
 <script>
-    // 簡單編輯切換
     const editBtn = document.getElementById('edit2');
     let ed = false;
     editBtn.addEventListener('click', ()=>{
@@ -133,8 +128,6 @@
       });
       editBtn.textContent = ed? '結束編輯' : '切換編輯';
     });
-
-    // 下載檔案
     document.getElementById('download2').addEventListener('click', ()=>{
       const doctype = '<!doctype html>';
       const html = document.documentElement.outerHTML;
@@ -142,15 +135,13 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = '履歷_王氏紅絨_AU114011114_alt.html';
+      a.download = '履歷_王氏紅絨_AU114011114_alt_withimg.html';
       document.body.appendChild(a);
       a.click();
       a.remove();
       URL.revokeObjectURL(url);
     });
-
-    // 預設 Avatar 文字取自「紅絨」
-    document.getElementById('avatar2').textContent = '紅絨';
+    
   </script>
 </body>
 </html>
