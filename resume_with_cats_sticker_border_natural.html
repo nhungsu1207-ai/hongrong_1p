@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>履歷 — 王氏紅絨｜健康產業管理 (自然貼紙版)</title>
+<style>
+  :root{
+    --bg1:#fff6fa;
+    --bg2:#fff0f4;
+    --card:#ffffff;
+    --accent:#ff86b0;
+    --muted:#6b6b6b;
+  }
+  body{
+    margin:0;
+    font-family:'Noto Sans TC',Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;
+    background:linear-gradient(180deg,var(--bg1),var(--bg2));
+    color:#333;
+  }
+  .wrap{max-width:980px;margin:32px auto;padding:20px;}
+  .card{display:flex;gap:24px;background:linear-gradient(180deg,#fff,#fffafc);
+         border-radius:16px;box-shadow:0 12px 30px rgba(240,160,190,0.18);
+         padding:18px;border:1px solid rgba(255,200,220,0.6);}
+  .aside{width:300px;padding:22px;background:linear-gradient(180deg,#fffaf6,transparent);border-radius:12px;}
+  .avatar{width:120px;height:120px;border-radius:18px;background:linear-gradient(135deg,#ffd2e0,#ffeef4);
+           overflow:hidden;margin:0 auto;}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+  .name{text-align:center;margin-top:14px;font-weight:800;color:var(--accent);font-size:20px;}
+  .id{text-align:center;color:var(--muted);margin-top:6px;}
+  .badge{display:inline-block;margin-top:10px;background:#fff0f6;padding:6px 10px;border-radius:999px;color:#7a4a5a;font-weight:700;}
+  .contact{margin-top:14px;color:var(--muted);}
+  .contact a{display:block;color:var(--muted);text-decoration:none;margin:6px 0;}
+  .main{flex:1;padding:6px 12px;}
+  .section{
+    position:relative;
+    margin-bottom:24px;
+    background:var(--card);
+    border-radius:22px;
+    padding:16px;
+    box-shadow:0 10px 20px rgba(255,180,200,0.25);
+    border:10px solid #fff;
+  }
+  .section h3{margin:0 0 8px 0;color:var(--accent);font-size:15px;}
+  .card-item{background:linear-gradient(180deg,#fffafc,#fffdfd);padding:12px;border-radius:12px;border:1px dashed rgba(255,200,220,0.6);}
+  .desc{color:#444;line-height:1.6;}
+  footer{text-align:center;color:var(--muted);margin-top:8px;}
+  .cat{
+    position:absolute;
+    width:80px;
+    filter:drop-shadow(0 0 6px rgba(255,255,255,0.8));
+    animation:wiggle 4s ease-in-out infinite alternate;
+    transition:transform 0.2s ease;
+  }
+  @keyframes wiggle{
+    0%{transform:rotate(-1deg) translateY(0);}
+    50%{transform:rotate(1deg) translateY(-3px);}
+    100%{transform:rotate(-1deg) translateY(0);}
+  }
+  .cat:hover{transform:scale(1.1) rotate(3deg);}
+  @media(max-width:760px){
+    .card{flex-direction:column;}
+    .aside{width:100%;order:2;}
+    .main{order:1;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <aside class="aside">
+      <div class="avatar"><img src="image/4fd62e65-f076-49c3-b153-8ac170dd4676.jpg" alt="avatar"></div>
+      <div class="name">王氏紅絨</div>
+      <div class="id">學號 AU114011114</div>
+      <div style="text-align:center"><span class="badge">健康產業管理系 一年級</span></div>
+      <div class="contact">
+        <a href="mailto:hongrong@example.com">📧 hongrong@example.com</a>
+        <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+        <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+        <p style="color:var(--muted);margin-top:10px;">臺北市, 臺灣</p>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="section">
+        <h3>個人簡介</h3>
+        <div class="card-item">
+          <p class="desc">我是王氏紅絨，健康產業管理系一年級學生（AU114011114）。我對健康促進、社區衛生與健康科技應用有興趣，期望將來能結合管理與資料分析，推動智慧健康服務。</p>
+        </div>
+        <img src="meo-removebg-preview.png" class="cat" style="top:-30px; left:60px; transform:rotate(-5deg);">
+        <img src="meoo-removebg-preview.png" class="cat" style="top:-40px; right:50px; transform:rotate(8deg);">
+      </section>
+
+      <section class="section">
+        <h3>學習歷程</h3>
+        <div class="card-item">
+          <ul class="desc"><li>修習科目：健康管理概論、生理學基礎、醫療產業導論</li><li>課堂報告：健康產業趨勢與永續發展</li><li>團隊作業：社區健康促進活動策劃</li></ul>
+        </div>
+        <img src="meooo-removebg-preview.png" class="cat" style="bottom:-25px; left:-10px; transform:rotate(-6deg);">
+      </section>
+
+      <section class="section">
+        <h3>學習目標</h3>
+        <div class="card-item">
+          <p class="desc">短期：建立健康照護基礎知識、熟悉 Excel 與資料整理；中期：參與健康推廣專案、學習專案管理；長期：成為能結合科技與健康的產業管理專業人才。</p>
+        </div>
+        <img src="meoooo-removebg-preview.png" class="cat" style="top:-35px; right:20px; transform:rotate(10deg);">
+      </section>
+
+      <section class="section">
+        <h3>活動與志工參與</h3>
+        <div class="card-item">
+          <ul class="desc"><li>2025 健康促進週 — 志工服務與現場諮詢協助</li><li>健康管理學會 — 成員（參與講座）</li><li>班級學習委員 — 協助同學整理課程資料</li></ul>
+        </div>
+        <img src="stkmeo-removebg-preview.png" class="cat" style="bottom:-30px; right:40px; transform:rotate(-8deg);">
+      </section>
+
+      <section class="section">
+        <h3>興趣與自我成長</h3>
+        <div class="card-item">
+          <p class="desc">喜歡跑步、閱讀健康管理相關書籍，並參與校園心理健康推廣活動，重視身心平衡與團隊協作。</p>
+        </div>
+        <img src="meoooo-removebg-preview.png" class="cat" style="bottom:-20px; right:-10px; transform:rotate(-10deg);">
+      </section>
+
+      <footer>履歷 — 王氏紅絨｜健康產業管理</footer>
+    </main>
+  </div>
+</div>
+</body>
+</html>
